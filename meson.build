@@ -3,6 +3,7 @@ project('doctest', 'cpp',
     license : 'MIT', 
     default_options : ['cpp_std=c++14']
 )
-includes = include_directories('doctest')
-doctest_dep = declare_dependency(include_directories: includes)
+doctest_inc = include_directories('doctest')
+fakeit_inc = include_directories('fakeit')
+doctest_dep = declare_dependency(include_directories: [includes, fakeit])
 
