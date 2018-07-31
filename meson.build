@@ -5,5 +5,5 @@ project('doctest', 'cpp',
 )
 doctest_inc = include_directories('doctest')
 fakeit_inc = include_directories('fakeit')
-doctest_dep = declare_dependency(include_directories: [includes, fakeit])
+doctest_dep = declare_dependency(include_directories: [doctest_inc, fakeit_inc])
 
